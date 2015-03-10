@@ -4,6 +4,25 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Kevin Chiu's Personal Website</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+  <script>
+  $(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  });
+  </script>
   </head>
   <body>
     <!-- NAVBAR -->
@@ -18,11 +37,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">Personal Website</a>
+              <a class="navbar-brand" href="#home">Personal Website</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
+                <li class="active"><a href="#home">Home</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#leadership">Leadership</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -35,7 +54,7 @@
     </div>
 
     <!-- CONTENT -->
-      <div class="jumbotron">
+      <div class="jumbotron" id ="home">
         <h1 class="text-center">Kevin Chiu</h1>
         <img class="img-circle center-block" style="width: 140px; height: 140px" src="me.jpg"></img>
         <h2 class="text-center"> Carnegie Mellon University </h2>
@@ -54,8 +73,7 @@
           I graduated Stuyvesant High School in New York, NY in June 2012.</p>            
       </div>
 
-      <a id ="experience"></a>
-      <hr class="featurette-divider">
+      <hr class="featurette-divider" id ="experience">
 
       <div class="row featurette lead">
         <h1 class="text-center">Experience</h1>
@@ -81,8 +99,7 @@
           </p>         
       </div>
 
-      <a id ="leadership"></a>
-      <hr class="featurette-divider">
+      <hr class="featurette-divider" id ="leadership">
       <div class="row featurette lead">
         <h1 class="text-center">Leadership & Extracurriculars</h1>
         <p> At Carnegie Mellon University, I am actively involved in different organizations. In the School of Computer Science, I am Course Assistant for the course: Principles of Computing. I lead weekly recitations to reinforce fundamental concepts and algorithmic thinking.
@@ -93,9 +110,7 @@
         </p>            
       </div>
 
-
-      <a id ="projects"></a>
-      <hr class="featurette-divider">
+      <hr class="featurette-divider" id ="projects">
       <div class="row featurette lead">
           <h1 class="text-center">Education</h1>
           <p> I am a student attending Carnegie Mellon University majoring in Information System and minoring in Software Engineering and Economics. I will be graduating in May 2016 and I am currently pursuing a career in Project Management or Software Engineering. Coursework that I have found interesting include:
@@ -108,8 +123,7 @@
           I graduated Stuyvesant High School in New York, NY in June 2012.</p>            
       </div>
 
-      <a id ="skills"></a>
-      <hr class="featurette-divider">
+      <hr class="featurette-divider" id ="skills">
       <div class="row featurette lead">
           <h1 class="text-center">Education</h1>
           <p> I am a student attending Carnegie Mellon University majoring in Information System and minoring in Software Engineering and Economics. I will be graduating in May 2016 and I am currently pursuing a career in Project Management or Software Engineering. Coursework that I have found interesting include:
@@ -130,6 +144,7 @@
     </div>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="scroll.js"></script>
   </body>
 </html>
 
