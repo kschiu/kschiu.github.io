@@ -5,4 +5,10 @@ body {
 div.jumbotron{
 	background-color: #2C3E50;
 	color: #FFFFFF;
+	padding: 100px 20px;
 }	
+
+div.row.featurette{
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
