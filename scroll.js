@@ -16,3 +16,4 @@
     });
   });
 </script>
+// Code from https://css-tricks.com/snippets/jquery/smooth-scrolling/
